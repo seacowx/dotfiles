@@ -11,11 +11,11 @@ yabai -m config window_placement first_child
 yabai -m config window_placement second_child
 
 # Set all padding and gaps to 20pt (default: 0)
-yabai -m config top_padding    8
-yabai -m config bottom_padding 5
-yabai -m config left_padding   5
-yabai -m config right_padding  5
-yabai -m config window_gap     5
+yabai -m config top_padding    10
+yabai -m config bottom_padding 6
+yabai -m config left_padding   6
+yabai -m config right_padding  6
+yabai -m config window_gap     8
 
 # Override gaps for space 2 only
 yabai -m config --space 2 window_gap 0
@@ -63,3 +63,5 @@ yabai -m config external_bar all:28:0
 
 yabai -m signal --add event=window_created action="sketchybar -m --trigger window_change &> /dev/null"
 yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger window_change &> /dev/null"
+
+borders active_color=0xffFC6736 inactive_color=0xff0C2D57 width=6.0 &
