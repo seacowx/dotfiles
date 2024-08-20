@@ -95,3 +95,5 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.diagnostic.config({virtual_text = false})
