@@ -6,5 +6,26 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map({"n", "i"}, "<C-s>", ":MarkdownPreview <cr>")
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({ "n", "t" }, "<leader>tt", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
+end, { desc = "terminal toggle floating term" })
+
+map({ "n", "t" }, "<leader>ww", function()
+  require("nvchad.term").toggle { pos = "vsp", id = "vtoggleTerm" }
+end, { desc = "terminal toggleable vertical term" })
+
+-- copilot chat options
+map({ "n", "t" }, "<leader>cc", "<cmd> CopilotChatToggle <cr>", { desc = "terminal toggleable horizontal term" })
+map({ "n", "t" }, "<leader>ccr", "<cmd> CopilotChatReset <cr>", { desc = "terminal toggleable horizontal term" })
+map({ "n", "t" }, "<leader>ccm", "<cmd> CopilotChatModels <cr>", { desc = "terminal toggleable horizontal term" })
+map({ "n", "t" }, "<leader>ccq", function()
+      local input = vim.fn.input("Quick Chat: ") if input ~= "" then require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
+end, {desc = "CopilotChat - Quick chat"})
+map({ "n", "t" }, "<leader>cce", "<cmd>CopilotChatExplain<cr>", {desc = "CopilotChat - Explain code" })
+map({ "n", "t" }, "<leader>ccf", "<cmd>CopilotChatFixDiagnostic<cr>", {desc = "CopilotChat - Fix diagnostic"})
+map({ "n", "t" }, "<leader>cci", "<cmd>CopilotChatInPlace<cr>", {desc = "CopilotChat - In place"})
+
+map({ "n", "t" }, "<leader>tm", "<cmd> TimerlyToggle <cr>", { desc = "toggle timerly timer" })
