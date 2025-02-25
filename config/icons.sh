@@ -8,6 +8,7 @@ export ICON_CHART=󱕍 # activity monitor, btop
 export ICON_LOCK=󰌾
 
 export ICONS_SPACE=(󰎤 󰎧 󰎪 󰎭 󰎱 󰎳 󰎶 󰎹)
+export ICONS_SPACE=(壹 贰 叁 肆 伍 陆 柒 捌 玖)
 
 export ICON_APP=󰣆 # fallback app
 export ICON_TERM=󰆍 # fallback terminal app, terminal, warp, iterm2

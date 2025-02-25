@@ -1,3 +1,6 @@
+sudo yabai --load-sa
+osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
+
 # bsp or float (default: float)
 yabai -m config layout bsp
 
@@ -13,9 +16,9 @@ yabai -m config window_placement second_child
 # Set all padding and gaps to 20pt (default: 0)
 yabai -m config top_padding    10
 yabai -m config bottom_padding 5
-yabai -m config left_padding   5
-yabai -m config right_padding  5
-yabai -m config window_gap     10
+yabai -m config left_padding   3
+yabai -m config right_padding  3
+yabai -m config window_gap     8
 
 # Override gaps for space 2 only
 yabai -m config --space 2 window_gap 0
@@ -58,6 +61,11 @@ yabai -m rule --add app="^Tomito$" manage=off
 yabai -m rule --add app="^Calendar$" manage=off
 yabai -m rule --add app="^ChatGPT$" manage=off
 yabai -m rule --add app="^小红书$" manage=off
+yabai -m rule --add app="^iPhone Mirroring$" manage=off
+yabai -m rule --add app="^Microsoft To Do$" manage=off
+yabai -m rule --add app="^Perplexity$" manage=off
+yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
 
 # create void space on top to accomadate the simple-bar
 yabai -m config external_bar all:28:0
@@ -65,4 +73,6 @@ yabai -m config external_bar all:28:0
 yabai -m signal --add event=window_created action="sketchybar -m --trigger window_change &> /dev/null"
 yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger window_change &> /dev/null"
 
-borders active_color=0xffFC6736 inactive_color=0xff0C2D57 width=6.0 &
+# borders active_color=0xe0b8bb26 \
+#         inactive_color=0xe0ebdbb2 \
+#         width=6.0
