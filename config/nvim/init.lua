@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
+
 if not vim.uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
@@ -26,9 +27,8 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
--- load theme
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "statusline")
+ dofile(vim.g.base46_cache .. "defaults")
+ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
@@ -189,6 +189,12 @@ require('hlchunk').setup({
     line_num = {
         enable = true
     }
+})
+
+require('showkeys').setup({
+  position = 'top-right',
+  maxkeys = 6,
+  show_count = true,
 })
 
 

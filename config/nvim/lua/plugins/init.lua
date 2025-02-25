@@ -30,14 +30,6 @@ return {
     opts = { }
   },
   {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-    },
-    lazy = false
-  },
-  {
     "nvim-treesitter/nvim-treesitter-context",
     lazy = false,
   },
@@ -53,9 +45,11 @@ return {
   },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
-    event = "VeryLazy",
+    event = "VeryLazy", -- Or `LspAttach`
+    priority = 1000, -- needs to be loaded in first
     config = function()
         require('tiny-inline-diagnostic').setup()
+        vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
     end
   },
   -- {
@@ -90,14 +84,30 @@ return {
     -- See Commands section for default commands if you want to lazy load on them
   },
   {
-    "nvzone/timerly",
-    cmd = "TimerlyToggle",
-  },
-  {
     "shellRaining/hlchunk.nvim",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("hlchunk").setup({})
     end
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+    }
   },
 }

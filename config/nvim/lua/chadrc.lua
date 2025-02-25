@@ -1,59 +1,67 @@
--- This file  needs to have same structure as nvconfig.lua 
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
+local options = {
 
----@type ChadrcConfig
-local M = {}
+  base46 = {
+    theme = "gruvchad",
+    transparency = true,
 
-M.term = {
-   winopts = { number = false },
-   sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
-   float = {
-     row = 0.09, col = 0.1,
-     width = 0.8, height = 0.8,
-     border = "single",
-   },
- }
+    hl_override = {
+      Comment = { italic = true },
+      ["@comment"] = { italic = true },
+    },
 
-M.base46 = {
-	theme = "onedark",
-  transparency = true,
+    term = {
+      float = {
+        relative = "editor",
+        width = 0.8,
+        height = 0.8,
+        row = 0.088,
+        col = 0.088,
+        border = "double"
+      }
+    },
 
-	hl_override = {
-		Comment = { italic = true },
-		["@comment"] = { italic = true },
-	},
+    changed_themes = {
+      all = {
+        base_30 = {
+          grey_fg = "#939185",
+          grey = "#939185",
+        },
+        base_16 = {
+          base02 =  "#67656e",
+          base03 =  "#939185",
+        }
+      },
+    }
+  },
 
-  statusline = {
-    theme = "vscode_colored"
+  term = {
+     winopts = { number = false },
+     sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
+     float = {
+       row = 0.09, col = 0.1, width = 0.8, height = 0.8,
+       border = "single",
+     },
   },
 
   nvdash = {
     load_on_startup = true,
   },
 
-  term = {
-    float = {
-      relative = "editor",
-      width = 0.8,
-      height = 0.8,
-      row = 0.088,
-      col = 0.088,
-      border = "double"
-    }
+  ui = {
+    statusline = {
+      theme = "default",
+      separator_style = "block",
+    },
   },
 
-  -- Test
-  changed_themes = {
-    gruvchad = {
-      base_30 = {
-        grey_fg = "#808D7C",
-        grey = "#939185",
-      },
-      base_16 = {
-        base02 = "#666569",
-      }
-    },
+  colorify = {
+    enabled = true,
+    mode = "virtual", -- fg, bg, virtual
+    virt_text = "󱓻 ",
+    highlight = { hex = true, lspvars = true },
   }
+
 }
 
-return M
+local status, chadrc = pcall(require, "chadrc")
+return vim.tbl_deep_extend("force", options, status and chadrc or {})
