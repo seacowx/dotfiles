@@ -1,0 +1,195 @@
+"editor.tokenColorCustomizations": {
+      "textMateRules": [
+          {
+              "scope": [
+                  "comment",
+                  "entity.name.type.class",
+                  "keyword",
+                  "constant",
+                  "storage.modifier",
+                  "storage.type.class.js"
+              ],
+              "settings": {
+                  "fontStyle": "italic"
+              }
+          },
+          {
+              "name": "Python Syntax",
+              "scope": [
+                  "source.python"
+              ],
+              "settings": {
+                  "foreground": "#89d6c4db"
+              }
+          },
+          {
+              "name": "Variable names",
+              "scope": ["entity.name.variable", "variable"],
+              "settings": {
+                  "foreground": "#89d6c4db"
+              }
+          },
+          {
+              "name": "python-lambda",
+              "scope": [
+                  "meta.lambda-function.python",
+                  "storage.type.function.lambda.python",
+                  "storage.modifier.declaration.python",
+              ],
+              "settings": {
+                  "foreground": "#ff5517"
+              }
+          },
+          {
+              "name": "decimal-python",
+              "scope": [
+                  "storage.type.format.python"
+              ],
+              "settings": {
+                  "foreground": "#ff9e17"
+              }
+          },
+          {
+              "name": "Constants",
+              "scope": [
+                  "constant",
+                  "constant.numeric.bin.python",
+                  "storage.type.number.python"
+              ],
+              "settings": {
+                  "foreground": "#ff5117"
+              }
+          },
+          {
+              "name": "F-string",
+              "scope": [
+                  "meta.fstring.python",
+              ],
+              "settings": {
+                  "foreground": "#ff9e17"
+              }
+          },
+          {
+              "name": "Inheritance",
+              "scope": [
+                  "entity.other.inherited-class.python",
+                  "meta.class.inheritance.python",
+                  "meta.class.python",
+              ],
+              "settings": {
+                  "foreground": "#84c693",
+                  "fontStyle": "bold"
+              }
+          },
+          {
+              "name": "Keywords",
+              "scope": [
+                  "keyword",
+                  "storage.type.function.python",
+                  "storage.type.class.python"
+              ],
+              "settings": {
+                  "foreground": "#ff7c17"
+              }
+          },
+          {
+              "name": "Strings",
+              "scope": [
+                  "string.quoted",
+                  "string.template",
+                  "storage.type.string.python",
+                  "string.regexp.quoted.single.python"
+              ],
+              "settings": {
+              "foreground": "#9ad49ee7"
+              }
+          },
+          { 
+              "name": "Self",
+              "scope": [
+                  "variable.language.special.self.python",
+              ],
+              "settings": {
+                  "foreground": "#fe9400"
+              }
+          },
+          {
+              "name": "Parameters & Python support",
+              "scope": ["variable.parameter", "support.type.python"],
+              "settings": {
+                  "foreground": "#8fbac8"
+              }
+          },
+          {
+              "name": "function-arguments",
+              "scope": [
+                  "meta.function-call.arguments.python",
+              ],
+              "settings": {
+                  // "foreground": "#8fbac8"
+                  "foreground": "#f8c256"
+              }
+          },
+          {
+              "name": "async",
+              "scope": [
+                  "storage.type.function.async.python",
+                  "keyword.control.flow.python",
+              ],
+              "settings": {
+                  "foreground": "#ff7c17",
+                  "fontStyle": "bold"
+              }
+          },
+          {
+              "name": "Function-Call",
+              "scope": [
+                  // "meta.function-call.generic.python",     
+                  "meta.function-call.python",
+              ],
+              "settings": {
+                  "foreground": "#e78482",
+                  // "fontStyle": "italic"
+                  "fontStyle": "",
+              }
+          },
+          {
+              "name": "Function-Call-Other",
+              "scope": [
+                  "support.function.builtin.python",
+                  "meta.member.access.python",
+              ],
+              "settings": {
+                  "foreground": "#f8c256",
+                  // "fontStyle": "italic"
+                  "fontStyle": "",
+              }
+          },
+          {
+              "name": "Function names",
+              "scope": [
+                  "entity.name.function",
+                  "entity.name.type.class.python",
+                  "support.function.magic.python"
+              ],
+              "settings": {
+                  // "fontStyle": "italic",
+                  "fontStyle": "",
+                  "foreground": "#8fc8bb"
+              }
+          },
+          {
+              "scope": [
+                  "invalid",
+                  "keyword.operator",
+                  "constant.numeric.css",
+                  "keyword.other.unit.px.css",
+                  "constant.numeric.decimal.js",
+                  "constant.numeric.json"
+              ],
+              "SETTINGS": {
+                  "fontStyle": ""
+              }
+          }
+      ]
+  },
