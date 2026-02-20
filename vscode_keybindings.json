@@ -1,0 +1,271 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Toggle between terminal and editor focus
+{
+    "key": "ctrl+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "editorFocus"
+},
+{
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus"
+},
+{
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+},
+{
+    "key": "shift+ctrl+tab",
+    "command": "workbench.action.previousEditor",
+},
+{
+    "key": "ctrl+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when":    "chatInputHasFocus"
+},
+{
+    "key": "ctrl+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+},
+{
+    "key": "ctrl+h",
+    "command": "workbench.action.focusSideBar",
+    "when":    "editorFocus"
+},
+{
+    "key": "cmd+k",
+    "command": "-workbench.action.togglePanel"
+},
+{
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+},
+{
+    "key": "cmd+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+},
+{
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+},
+{
+    "key": "ctrl+h",
+    "command": "-deleteLeft",
+    "when": "textInputFocus"
+},
+{
+    "key": "ctrl+h",
+    "command": "-extension.vim_ctrl+h",
+    "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+},
+{
+    "key": "ctrl+j",
+    "command": "-extension.vim_ctrl+j",
+    "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+},
+{
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+},
+{
+    "key": "ctrl+p",
+    "command": "workbench.action.togglePanel"
+},
+{
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+},
+{
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly"
+},
+{
+    "key": "ctrl+k .",
+    "command": "-extension.clipToHtml",
+    "when": "editorTextFocus"
+},
+{
+    "key": "ctrl+k t",
+    "command": "-extension.insertToc",
+    "when": "editorTextFocus"
+},
+{
+    "key": "ctrl+k ,",
+    "command": "-extension.saveToHtml",
+    "when": "editorTextFocus"
+},
+{
+    "key": "ctrl+l",
+    "command": "-extension.vim_navigateCtrlL",
+    "when": "editorTextFocus && vim.active && vim.use<C-l> && !inDebugRepl"
+},
+{
+    "key": "ctrl+l",
+    "command": "-notebook.centerActiveCell",
+    "when": "notebookEditorFocused"
+},
+{
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.clear",
+    "when": "hasChatProvider && inChat"
+},
+{
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveAs"
+},
+{
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveLocalFile",
+    "when": "remoteFileDialogVisible"
+},
+{
+    "key": "shift+cmd+s",
+    "command": "editor.action.inspectTMScopes"
+},
+{
+    "key": "cmd+e",
+    "command": "inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+},
+{
+    "key": "cmd+i",
+    "command": "-inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+},
+{
+    "key": "ctrl+n",
+    "command": "-workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+},
+{
+    "key": "ctrl+n",
+    "command": "-cursorDown",
+    "when": "textInputFocus"
+},
+{
+    "key": "ctrl+n",
+    "command": "-list.focusDown",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+},
+{
+    "key": "ctrl+n",
+    "command": "-selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+},
+{
+    "key": "ctrl+n",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+},
+{
+    "key": "ctrl+n",
+    "command": "-showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+},
+{
+    "key": "ctrl+n",
+    "command": "-extension.vim_ctrl+n",
+    "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+},
+{
+    "key": "ctrl+n",
+    "command": "workbench.action.toggleSidebarVisibility",
+},
+{
+    "key": "shift+cmd+g",
+    "command": "-workbench.action.terminal.findPrevious",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+},
+{
+    "key": "shift+cmd+g",
+    "command": "-workbench.action.terminal.openDetectedLink",
+    "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'"
+},
+{
+    "key": "shift+cmd+g",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+},
+{
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+},
+{
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+},
+{
+    "key": "ctrl+k",
+    "command": "-extension.vim_ctrl+k",
+    "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+},
+{
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+},
+{
+    "key": "ctrl+p",
+    "command": "-cursorUp",
+    "when": "textInputFocus"
+},
+{
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+},
+{
+    "key": "ctrl+p",
+    "command": "-list.focusUp",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+},
+{
+    "key": "ctrl+p",
+    "command": "-selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+},
+{
+    "key": "ctrl+p",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+},
+{
+    "key": "ctrl+p",
+    "command": "-showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+},
+{
+    "key": "cmd+n",
+    "command": "welcome.showNewFileEntries"
+},
+{
+    "key": "ctrl+alt+cmd+n",
+    "command": "-welcome.showNewFileEntries"
+},
+{
+    "key": "cmd+p",
+    "command": "git.push",
+    "when": "github:createPullRequestWebview.canMove"
+},
+{
+    "key": "cmd+g",
+    "command": "github.copilot.git.generateCommitMessage",
+    "when": "github:createPullRequestWebview.canMove"
+},
+{
+    "key": "cmd+u",
+    "command": "git.pull",
+    "when": "github:createPullRequestWebview.canMove"
+},
+{ 
+    "key": "cmd+n", 
+    "command": "explorer.newFile", 
+    "when": "explorerViewletFocus"
+},
+]
